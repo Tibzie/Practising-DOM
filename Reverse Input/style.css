@@ -28,11 +28,26 @@ h1 {
     padding: 10px 10px;
     margin: 5px 0px;
 }
+.row {
+    display: flex;
+}
 #input {
     font-size: 14px;
     width: 100%;
 }
-#button {
+#reset-btn {
+    border-radius: 0px;
+    padding: 10px 10px;
+    font-size: 14px;
+    margin: 5px 0px 5px 3px;
+    cursor: pointer;
+    color: #46494C;
+    transition: 300ms ease-in-out;
+}
+#reset-btn:hover {
+    border-radius: 20px;
+}
+#submit {
     font-size: 15px;
     font-weight: bold;
     border: none;
@@ -45,10 +60,10 @@ h1 {
     width: 50%;
     justify-content: center;
 }
-#button:hover {
+#submit:hover {
     background-color: #46494C;
     width: 100%;
 }
-#button:focus {
+#submit:focus, #input:focus, #reset-btn:focus {
     outline: none;
 }

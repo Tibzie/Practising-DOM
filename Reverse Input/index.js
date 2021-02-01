@@ -1,5 +1,5 @@
 let input = document.getElementById("input");
-let btn = document.getElementById("button");
+let btn = document.getElementById("submit");
 let space = document.getElementById("empty-space");
 let resetBtn = document.getElementById("reset-btn");
 
