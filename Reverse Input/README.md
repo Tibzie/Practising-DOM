@@ -8,3 +8,5 @@ It uses CSS3 transitions and addeventlisteners.
 ![input](./screenshots/Input.JPG)
 ### Output ###
 ![output](./screenshots/Output.JPG)
+### Reset Input Field ###
+![reset](./screenshots/Reset.JPG)
