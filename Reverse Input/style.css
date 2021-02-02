@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;1,600&display=swap');
+
 :root {
     --main-bg-color: #dcdcdc;
+    --raleway-font: 'Raleway', sans-serif;
+    --raleway-light: 300;
+    --raleway-regular: 400;
+    --raleway-bold: 600;
+    --raleway-italic: italic;
 }
 * {
     margin: 0;
@@ -8,18 +15,17 @@
 }
 body {
     background-color: var(--main-bg-color);
-    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family:  var(--raleway-font);
+    font-weight: var(--raleway-regular);
 }
 #container {
     width: 500px;
     height: auto;
-    /* display: flex;
-    flex-direction: column; */
 }
 h1 {
     color: #46494C;
@@ -34,6 +40,8 @@ h1 {
 #input {
     font-size: 14px;
     width: 100%;
+    font-family: var(--raleway-font);
+    font-weight: var(--raleway-light);
 }
 #reset-btn {
     border-radius: 0px;
@@ -43,15 +51,43 @@ h1 {
     cursor: pointer;
     color: #46494C;
     transition: 300ms ease-in-out;
+    position: relative;
 }
 #reset-btn:hover {
     border-radius: 20px;
 }
+.tooltip-text {
+    position: absolute;
+    opacity: 0;
+    transition: 300ms ease-in-out;
+    top: -50px;
+    left: -20px;
+    padding: 10px 20px;
+    background-color: #2e3031;
+    color: white;
+    font-family:  var(--raleway-font);
+    font-weight: var(--raleway-bold);
+    font-style: var(--raleway-italic);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 32.5px;
+    border: 5px solid;
+    border-color: #2e3031 transparent transparent transparent;
+}
+#reset-btn:hover .tooltip-text {
+    opacity: 1;
+}
 #submit {
     font-size: 15px;
     font-weight: bold;
+    letter-spacing: 0px;
     border: none;
-    background-color: #1985a1;
+    background-color: #1c7187;
     color: white;
     padding: 15px 25px;
     cursor: pointer;
